@@ -283,9 +283,9 @@ class DNpedia:
 class WhoisExtractor:
 	def __init__(self):
 		try:
-			#"WHMCSxjLcDnvnTBrK=g3p549h3dnf0av9j29j230vmch"
-			#"WHMCSxjLcDnvnTBrK=jlfm4f1sen46prf788g25o4jab"
-			hdr = {"cookie":"WHMCSxjLcDnvnTBrK=g3p549h3dnf0av9j29j230vmch"}
+			#"WHMCSxjLcDnvnTBrK=g3p549h3dnf0av9j29j230vmch" #contoh
+			#"WHMCSxjLcDnvnTBrK=dnjthkm9ihp4nc42lvsp21hv8e" #ekse
+			hdr = {"cookie":"WHMCSxjLcDnvnTBrK=dnjthkm9ihp4nc42lvsp21hv8e"}
 			cek = req.get("https://www.whoisextractor.in/index.php/user/profile",headers=hdr).text
 			if bs(cek,"html.parser").title.text == "Login - Whoisextractor":
 				exit(f"{red}>> {reset}cookie die")
